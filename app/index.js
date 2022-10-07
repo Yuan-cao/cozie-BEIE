@@ -312,25 +312,30 @@ function getNextview(button, view, views)
 function getDataFromSensors() {
     feedbackData = {
         startFeedback: new Date().toISOString(),
-        heartRate: hrm.heartRate,
+        // The line below in commented out in order to comply with the IRB of this experiment (UofT, BEIE)
+        //heartRate: hrm.heartRate,
     };
     // Body presence
     if (BodyPresenceSensor) {
         try {
-            feedbackData['bodyPresence'] = bodyPresence.present;
+            // The line below in commented out in order to comply with the IRB of this experiment (UofT, BEIE)
+            //feedbackData['bodyPresence'] = bodyPresence.present;
         } catch (e) {
             console.log("No body presence data");
         }
     }
     // Heart rate
     try {
-        feedbackData['restingHR'] = user.restingHeartRate;
+        
+        // The line below in commented out in order to comply with the IRB of this experiment (UofT, BEIE)
+        //feedbackData['restingHR'] = user.restingHeartRate;
     } catch (e) {
         console.log("No resting heart rate data available");
     }
     // Basal metabolic rate
     try {
-        feedbackData['BMR'] = user.bmr;
+        // The line below in commented out in order to comply with the IRB of this experiment (UofT, BEIE)
+        //feedbackData['BMR'] = user.bmr;
     } catch (e) {
         console.log("No resting basal metabolic rate data available");
     }
@@ -566,7 +571,7 @@ const bodyErrorLabel = errorLabel.getElementById("copy");
 const buzzOptions = {
     0: [],
     1: [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
-    2: [9, 11, 13, 15, 17, 19],
+    2: [9, 11, 13, 15, 17],
     3: [9, 12, 15, 18]
 };
 

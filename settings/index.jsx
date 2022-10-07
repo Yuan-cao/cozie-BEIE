@@ -160,19 +160,19 @@ function mySettings(props) {
                         {
                             name: "Every Hour",
                             value: "1",
-                            subLabel: "Between 9:00 - 21:00",
+                            subLabel: "Between 9:00 - 19:00",
                             img: sound
                         },
                         {
                             name: "Every 2 hours",
                             value: "2",
-                            subLabel: "Between 9:00 - 21:00",
+                            subLabel: "Between 9:00 - 17:00",
                             img: sound
                         },
                         {
                             name: "Every 3 hours",
                             value: "3",
-                            subLabel: "Between 9:00 - 21:00",
+                            subLabel: "Between 9:00 - 18:00",
                             img: sound
                         }
                     ]}

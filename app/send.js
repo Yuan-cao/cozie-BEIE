@@ -58,14 +58,17 @@ export function sendEventIfReady(_feedbackData) {
         voteLogLabel.text = voteLog + 'vl;';
     }
     // add the votelog to the feedback data json
-    _feedbackData['voteLog'] = voteLog[0];
+    _feedbackData['vote_count'] = voteLog[0];
     // store the votelog on the device as votelog.txt
     fs.writeFileSync("votelog.txt", voteLog, "json");
 
     function locationSuccess(position) {
-        console.log("GPS location success");
-        _feedbackData.lat = position.coords.latitude;
-        _feedbackData.lon = position.coords.longitude;
+        // The line below in commented out in order to comply with the IRB of this experiment (UofT, BEIE)
+        //console.log("GPS location success");
+        
+        //_feedbackData.lat = position.coords.latitude;
+        //_feedbackData.lon = position.coords.longitude;
+        console.log("GPS ignored");
         sendDataToCompanion(_feedbackData);
     }
 
