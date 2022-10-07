@@ -25,7 +25,7 @@
       }
     },
     "defaultLanguage": "en-US",
-    "appUUID": "f56edc3c-53b0-4699-b256-76c78a74f7ec"
+    "appUUID": "ed66f1a1-373b-4548-9f7e-b7797e1fe551"
   },
   "dependencies": {
     "@fitbit/sdk": "~4.1.0",
