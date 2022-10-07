@@ -19,14 +19,14 @@
 
   <use href="#left-button" id="not-comfy" pointer-events="visible">
     <set href="circle" attributeName="fill" to="fb-orange"/>
-    <set href="text" attributeName="text-buffer" to="Not Comfy"/>
-    <set href="image" attributeName="href" to="images/icons/not-comfy.png"/>
+    <set href="text" attributeName="text-buffer" to="Not in Suite"/>
+    <set href="image" attributeName="href" to="images/icons/no.png"/>
   </use>
 
   <use href="#right-button" id="comfy" pointer-events="visible">
     <set href="circle" attributeName="fill" to="fb-green"/>
-    <set href="text" attributeName="text-buffer" to="Comfy"/>
-    <set href="image" attributeName="href" to="images/icons/comfy.png"/>
+    <set href="text" attributeName="text-buffer" to="In Suite"/>
+    <set href="image" attributeName="href" to="images/icons/yes.png"/>
   </use>
 
   <use href="#mixed-text-center-top" id="errorLabel" height="50%">
