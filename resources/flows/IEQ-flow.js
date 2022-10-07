@@ -1,6 +1,6 @@
 export default [{
 
-    name: "Suite",
+    name: "suite",
     displayName: "In suite(Y/N)",
     type: "icon",
     questionText: "Are you in suite now?",
@@ -19,12 +19,12 @@ export default [{
         "images/icons/yes.png",
         "images/icons/no.png",
     ]
-}, {
+}, 
+{
        
     name: "Thermal",
     displayName: "Thermal",
     type: "icon",
-    requiresAnswer: [{ question: "Suite", value: 11 }],
     questionText: "What's your current",
     questionSecondText: "temperature preference?",
     answerDirectTo: {
@@ -49,7 +49,6 @@ export default [{
     name: "RH",
     displayName: "Relative Humidity",
     type: "icon",
-    requiresAnswer: [{ question: "Suite", value: 11 }],
     questionText: "What's your current ",
     questionSecondText: "humidity preference?",
     answerDirectTo: {
@@ -75,7 +74,6 @@ export default [{
     name: "IAQ",
     displayName: "IAQ",
     type: "icon",
-    requiresAnswer: [{ question: "Suite", value: 11 }],
     questionText: "What's your current air",
     questionSecondText: "quality preference?",
     answerDirectTo: {
@@ -97,7 +95,6 @@ export default [{
     name: "noise",
     displayName: "Noise",
     type: "icon",
-    requiresAnswer: [{ question: "Suite", value: 11 }],
     questionText: "What's your current",
     questionSecondText: "sound preference?",
     answerDirectTo: {
@@ -123,7 +120,6 @@ export default [{
     name: "light",
     displayName: "Light",
     type: "icon",
-    requiresAnswer: [{ question: "Suite", value: 11 }],
     questionText: "What's your current ",
     questionSecondText: "light preference?",
     answerDirectTo: {
@@ -149,7 +145,6 @@ export default [{
     name: "overall_comfort",
     displayName: "Overall comfort",
     type: "icon",
-    requiresAnswer: [{ question: "Suite", value: 11 }],
     questionText: "Are you comfortable",
     questionSecondText: "overall?",
     answerDirectTo: {
@@ -160,7 +155,6 @@ export default [{
             next: "end"
         }
     },
-
     iconText: ["Yes", "No"],
     iconColors: ["fb-green","fb-orange"],
     iconImages: [
