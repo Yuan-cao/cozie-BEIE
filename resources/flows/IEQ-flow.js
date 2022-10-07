@@ -108,7 +108,7 @@ export default [
             next: "light"
         }
     },
-    iconText: ["Quiter", "Louder", "I'm comfy"],
+    iconText: ["Quieter", "Louder", "I'm comfy"],
     iconColors: ["fb-orange", "fb-purple", "fb-green"],
     iconImages: [
         "images/icons/prefer_quieter.png",

@@ -19,7 +19,7 @@
 
   <use href="#left-button" id="not-comfy" pointer-events="visible">
     <set href="circle" attributeName="fill" to="fb-orange"/>
-    <set href="text" attributeName="text-buffer" to="Not in "/>
+    <set href="text" attributeName="text-buffer" to="Not in Suite"/>
     <set href="image" attributeName="href" to="images/icons/no.png"/>
   </use>
 

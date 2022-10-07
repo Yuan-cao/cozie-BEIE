@@ -195,7 +195,7 @@ for (const button of allButtons)
         {
             case 'startSurvey':
                 getDataFromSensors();
-                feedbackData["suite"] = 11
+                feedbackData["suite"] = 10
                 viewsStack.push(viewsArray[4]); // Start the survey by the first question
                 break;
             case 'flowControl':
@@ -222,7 +222,7 @@ for (const button of allButtons)
             case 'notComfyendSurvey':
                 feedbackData = {
                     startFeedback: new Date().toISOString(),
-                    suite: 9
+                    suite: 11
                 }
                 getDataEndSurvey();
                 sendEventIfReady(feedbackData);
