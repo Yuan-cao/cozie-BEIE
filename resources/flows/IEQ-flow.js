@@ -38,7 +38,7 @@ export default [
             next: "RH"
         }
     },
-    iconText: ["Cooler", "Warmer", "I'm Comfy"],
+    iconText: ["Cooler", "Warmer", "I'm comfy"],
     iconColors: ["fb-cyan", "fb-orange", "fb-green"],
     iconImages: [
         "images/icons/prefer_cold.png",
@@ -62,7 +62,7 @@ export default [
             next: "IAQ"
         }
     },
-    iconText: ["Drier", "More humid", "I'm Comfy"],
+    iconText: ["Drier", "More humid", "I'm comfy"],
     iconColors: ["fb-cyan", "fb-orange", "fb-green"],
     iconImages: [
         "images/icons/air/air_less_air.png",
@@ -84,7 +84,7 @@ export default [
             next: "noise"
         }
     },
-    iconText: ["Less odour", "I'm Comfy"],
+    iconText: ["Less odour", "I'm comfy"],
     iconColors: ["fb-orange", "fb-green"],
     iconImages: [
         "images/icons/freshair/air_fresh.png",
@@ -133,7 +133,7 @@ export default [
             next: "overall_comfort"
         }
     },
-    iconText: ["Dimmer", "Brighter", "No Change"],
+    iconText: ["Dimmer", "Brighter", "No change"],
     iconColors: ["fb-blue", "fb-peach", "fb-green"],
     iconImages: [
         "images/icons/prefer_dimmer.png",
