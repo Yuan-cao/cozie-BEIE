@@ -1,5 +1,5 @@
-export default [{
-
+export default [
+/*{
     name: "suite",
     displayName: "In suite(Y/N)",
     type: "icon",
@@ -19,10 +19,10 @@ export default [{
         "images/icons/yes.png",
         "images/icons/no.png",
     ]
-}, 
+},  */
 {
        
-    name: "Thermal",
+    name: "thermal",
     displayName: "Thermal",
     type: "icon",
     questionText: "What's your current",

@@ -93,7 +93,7 @@ let allButtons = [{
 }, {
     value: 9,
     obj: notComfy,
-    attribute: "startSurvey",
+    attribute: "notComfyendSurvey",
 },
 {
     value: "flowBack",
@@ -195,6 +195,7 @@ for (const button of allButtons)
         {
             case 'startSurvey':
                 getDataFromSensors();
+                feedbackData["suite"] = 11
                 viewsStack.push(viewsArray[4]); // Start the survey by the first question
                 break;
             case 'flowControl':
@@ -216,6 +217,16 @@ for (const button of allButtons)
                     feedbackData = {};
                 }
                 viewsStack.push(nextView);
+                break;
+            // Custom solution for Cozie-BEIE: Survey ends after pressing 'not in suite' (formerly 'not comfy')
+            case 'notComfyendSurvey':
+                feedbackData = {
+                    startFeedback: new Date().toISOString(),
+                    suite: 9
+                }
+                getDataEndSurvey();
+                sendEventIfReady(feedbackData);
+                feedbackData = {};
                 break;
             default:
                 break;
@@ -353,7 +364,11 @@ function getDataFromSensors() {
 function getDataEndSurvey() {
     const endFeedback = new Date();
     const startFeedback = new Date(feedbackData['startFeedback']);
-    feedbackData['responseSpeed'] = (endFeedback - startFeedback) / 1000.0;
+
+    let responseSpeed = (endFeedback - startFeedback) / 1000.
+    responseSpeed = parseFloat(responseSpeed).toFixed(1) // parsing required in order to guarantee that responseSpeed is always a float as required by the database.
+
+    feedbackData['responseSpeed'] = responseSpeed
     feedbackData['endFeedback'] = endFeedback.toISOString();
 }
 
