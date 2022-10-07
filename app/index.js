@@ -41,7 +41,8 @@ import {
 } from "./options";
 import './clock';
 
-import totalFlow from "../resources/flows/main-flow";
+//import totalFlow from "../resources/flows/main-flow";
+import totalFlow from "../resources/flows/IEQ-flow";
 
 /* -----------------------------------------------------------------------------------------------
                                     GLOBAL VARIABLES DECLARATION
