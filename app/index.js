@@ -94,8 +94,7 @@ let allButtons = [{
     value: 9,
     obj: notComfy,
     attribute: "notComfyendSurvey",
-},
-{
+}, {
     value: "flowBack",
     obj: flowBack,
     attribute: "flowControl",
@@ -195,7 +194,7 @@ for (const button of allButtons)
         {
             case 'startSurvey':
                 getDataFromSensors();
-                feedbackData["suite"] = 10
+                feedbackData["suite"] = 10;
                 viewsStack.push(viewsArray[4]); // Start the survey by the first question
                 break;
             case 'flowControl':
@@ -227,6 +226,8 @@ for (const button of allButtons)
                 getDataEndSurvey();
                 sendEventIfReady(feedbackData);
                 feedbackData = {};
+                nextView = viewsArray[1]; // Set 'Thank you' as next view
+                viewsStack.push(nextView);
                 break;
             default:
                 break;

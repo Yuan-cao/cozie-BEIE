@@ -21,7 +21,6 @@ export default [
     ]
 },  */
 {
-       
     name: "thermal",
     displayName: "Thermal",
     type: "icon",
