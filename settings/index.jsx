@@ -49,7 +49,7 @@ function mySettings(props) {
                     }
                 />
             </Section>
-
+            {/* API is hard-coded in companion/index.js. Inputting an API key on the phone is too cumbersome for an experiment with multiple participants.
             <Section>
                 <TextInput
                     label="API key (required)"
@@ -58,9 +58,8 @@ function mySettings(props) {
                         props.settingsStorage.setItem("api_key", selection)
                     }
                 />
-            </Section>
-
-            
+            </Section> --!>*/
+            }
 
             {/* -------------------------------------------------------------------------------------------------------------------------------------
             Description        :   optional section to allow users to select questions he wants to display
