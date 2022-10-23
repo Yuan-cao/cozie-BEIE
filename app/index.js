@@ -629,15 +629,16 @@ setInterval(function() {
             return Math.max(a, b);
         });
     } else {
-        const maxHour = 0
+        const maxHour = 0;
     }
 
     if (testedHoursNumber != vibrationTimeArray.length)
     {
         console.log("Next hour of vibration : " + vibrationTimeArray[0]);
         if (vibrationTimeArray[0] == currentHour) {
-            if (bodyPresence.present) { // REMOVED : && today.adjusted.steps > 300 -- vibrate only if the time is right and the user has walked at least 300 steps and the watch is worn
+            //if (bodyPresence.present) { // REMOVED : && today.adjusted.steps > 300 -- vibrate only if the time is right and the user has walked at least 300 steps and the watch is worn
                 // this ensures that the watch does not vibrate if the user is still sleeping
+            if (true) {     // hack to circumvent issue with bodyPresence detection
                 console.log("The watch should vibrate");
                 vibrate();
             }
