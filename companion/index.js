@@ -112,11 +112,13 @@ processAllFiles();
 
 function sendDataToInflux(data) {
 
-    let url = `https://0cs0bcauyc.execute-api.us-east-1.amazonaws.com/default/write-coziePublic-fitbitAPI`;
+    //let url = `https://0cs0bcauyc.execute-api.us-east-1.amazonaws.com/default/write-coziePublic-fitbitAPI`; // old web API
+    let url = `https://emavfzthbe.execute-api.ap-southeast-1.amazonaws.com/default/cozie-fitbit-app-write-influx`
 
     let user_id = "";
     let experiment_id = "";
-    let api_key;
+    //let api_key;
+    let api_key = "TsDq6AAGs22JJioTYruftaUqLm89MBVk1JS3kdja";
     // if user_id is not defined then assign the value undefined
     try {user_id = JSON.parse(settingsStorage.getItem('user_id')).name;}
     catch (error) {
@@ -129,16 +131,13 @@ function sendDataToInflux(data) {
         if (error instanceof TypeError) {
             experiment_id = "undefined"
         }}
-
+    
+    /* not necessary, since API key is hardcoded and input in companion is removed.
     try {api_key = JSON.parse(settingsStorage.getItem('api_key')).name}
     catch (error) {
-        api_key = "UBQpWptj9HaBJVAVEDOZ14aQoNh7EpTK9zccvBTa"
+        api_key = "TsDq6AAGs22JJioTYruftaUqLm89MBVk1JS3kdja"
     }
-
-    try {api_key = JSON.parse(settingsStorage.getItem('api_key')).name}
-    catch (error) {
-        api_key = "UBQpWptj9HaBJVAVEDOZ14aQoNh7EpTK9zccvBTa"
-    }
+    */
 
     data.user_id = user_id;
     data.experiment_id = experiment_id;
