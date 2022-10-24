@@ -24,7 +24,7 @@ export default [
     name: "thermal",
     displayName: "Thermal",
     type: "icon",
-    questionText: "Air temperature",
+    questionText: "Preferred air temperature?",
     questionSecondText: "",
     answerDirectTo: {
         9: {
@@ -37,7 +37,7 @@ export default [
             next: "RH"
         }
     },
-    iconText: ["Prefer cooler", "prefer warmer", "Is comfortable"],
+    iconText: ["Cooler", "Warmer", "I'm comfy"],
     iconColors: ["fb-cyan", "fb-orange", "fb-green"],
     iconImages: [
         "images/icons/prefer_cold.png",
@@ -46,7 +46,7 @@ export default [
     ],
 }, {
     name: "RH",
-    displayName: "Relative Humidity",
+    displayName: "Preferred humidity?",
     type: "icon",
     questionText: "Humidity",
     questionSecondText: "",
@@ -61,7 +61,7 @@ export default [
             next: "IAQ"
         }
     },
-    iconText: ["Prefer drier", "Prefer more humid", "Is comfortable"],
+    iconText: ["Drier", "More humid", "I'm comfy"],
     iconColors: ["fb-orange", "fb-cyan", "fb-green"],
     iconImages: [
         "images/icons/air/air_less_air.png",
@@ -73,7 +73,7 @@ export default [
     name: "IAQ",
     displayName: "IAQ",
     type: "icon",
-    questionText: "Air quality",
+    questionText: "Preferred air quality?",
     questionSecondText: "",
     answerDirectTo: {
         11: {
@@ -83,7 +83,7 @@ export default [
             next: "noise"
         }
     },
-    iconText: ["Prefer less odour", "Is comfortable"],
+    iconText: ["Less odour", "I'm comfy"],
     iconColors: ["fb-orange", "fb-green"],
     iconImages: [
         "images/icons/air/air_less_air.png",
@@ -94,7 +94,7 @@ export default [
     name: "noise",
     displayName: "Noise",
     type: "icon",
-    questionText: "Sound level",
+    questionText: "Preferred sound level?",
     questionSecondText: "",
     answerDirectTo: {
         9: {
@@ -107,7 +107,7 @@ export default [
             next: "light"
         }
     },
-    iconText: ["Prefer quieter", "Prefer louder", "Is comfortable"],
+    iconText: ["Quieter", "Louder", "I'm comfy"],
     iconColors: ["fb-purple", "fb-orange", "fb-green"],
     iconImages: [
         "images/icons/prefer_quieter.png",
@@ -119,8 +119,8 @@ export default [
     name: "light",
     displayName: "Light",
     type: "icon",
-    questionText: "What's your current ",
-    questionSecondText: "light preference?",
+    questionText: "Preferred light level? ",
+    questionSecondText: "",
     answerDirectTo: {
         9: {
             next: "overall_comfort"
@@ -132,7 +132,7 @@ export default [
             next: "overall_comfort"
         }
     },
-    iconText: ["Prefer dimmer", "Prefer brighter", "Is comfortable"],
+    iconText: ["Dimmer", "Brighter", "I'm comfy"],
     iconColors: ["fb-blue", "fb-peach", "fb-green"],
     iconImages: [
         "images/icons/prefer_dimmer.png",
