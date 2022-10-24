@@ -24,7 +24,7 @@ export default [
     name: "thermal",
     displayName: "Thermal",
     type: "icon",
-    questionText: "Preferred air temperature?",
+    questionText: "Preferred temperature?",
     questionSecondText: "",
     answerDirectTo: {
         9: {
@@ -46,9 +46,9 @@ export default [
     ],
 }, {
     name: "RH",
-    displayName: "Preferred humidity?",
+    displayName: "Relative Humidity",
     type: "icon",
-    questionText: "Humidity",
+    questionText: "Preferred humidity?",
     questionSecondText: "",
     answerDirectTo: {
         9: {
@@ -112,7 +112,7 @@ export default [
     iconImages: [
         "images/icons/prefer_quieter.png",
         "images/icons/prefer_louder.png",
-        "images/icons/neutral.png",
+        "images/icons/comfy.png",
     ],
 }, {
     
@@ -137,7 +137,7 @@ export default [
     iconImages: [
         "images/icons/prefer_dimmer.png",
         "images/icons/prefer_brighter.png",
-        "images/icons/neutral.png",
+        "images/icons/comfy.png",
     ],
 }, {
 
