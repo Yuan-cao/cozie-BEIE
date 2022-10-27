@@ -33,7 +33,30 @@ let voteLogFileTransfer = 0; // Global variable for handling vote logs
 
 //-------- COMPILE DATA AND SEND TO COMPANION  -----------
 export function sendEventIfReady(_feedbackData) {
+    console.log("############### Start sendEventIfReady ###############");
     console.log(JSON.stringify(_feedbackData));
+
+    // reading log file for debugging purposes
+    try {
+        voteLog = fs.readFileSync("votelog.txt", "json");
+    } catch (e) {
+        // if can't read set local file to empty
+        console.log("creating empty votelog.txt file");
+        voteLog = [0];
+    }
+    // Incremement the vote log by one
+    voteLog[0]++;
+    console.log("Vote log: " + voteLog[0]);
+    if (!isProduction) {
+        voteLogLabel.text = voteLog + 'vl;';
+    }
+    // add the votelog to the feedback data json
+    _feedbackData['vote_count'] = voteLog[0];
+    console.log("_feedbackData=");
+    console.log(JSON.stringify(_feedbackData));
+
+    // store the votelog on the device as votelog.txt
+    fs.writeFileSync("votelog.txt", voteLog, "json");
 
     console.log("Fitbit memory usage: " + memory.js.used + ", of the available: " + memory.js.total);
     // set timeout of gps https://dev.fitbit.com/build/reference/device-api/geolocation/
@@ -43,24 +66,7 @@ export function sendEventIfReady(_feedbackData) {
         maximumAge: 4 * 60 * 1000
     });
 
-    // reading log file for debugging purposes
-    try {
-        voteLog = fs.readFileSync("votelog.txt", "json");
-    } catch (e) {
-        // if can't read set local file to empty
-        console.log("creating empty votelog.txt file");
-        voteLog = [0]
-    }
-    // Incremement the vote log by one
-    voteLog[0]++;
-    // console.log("Vote log: " + voteLog[0]);
-    if (!isProduction) {
-        voteLogLabel.text = voteLog + 'vl;';
-    }
-    // add the votelog to the feedback data json
-    _feedbackData['vote_count'] = voteLog[0];
-    // store the votelog on the device as votelog.txt
-    fs.writeFileSync("votelog.txt", voteLog, "json");
+    console.log("############### End sendEventIfReady ###############");
 
     function locationSuccess(position) {
         // The line below in commented out in order to comply with the IRB of this experiment (UofT, BEIE)

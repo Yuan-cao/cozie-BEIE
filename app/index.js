@@ -219,10 +219,8 @@ for (const button of allButtons)
                 break;
             // Custom solution for Cozie-BEIE: Survey ends after pressing 'not in suite' (formerly 'not comfy')
             case 'notComfyendSurvey':
-                feedbackData = {
-                    startFeedback: new Date().toISOString(),
-                    suite: 11
-                }
+                getDataFromSensors()
+                feedbackData["suite"] = 11;
                 getDataEndSurvey();
                 sendEventIfReady(feedbackData);
                 feedbackData = {};
