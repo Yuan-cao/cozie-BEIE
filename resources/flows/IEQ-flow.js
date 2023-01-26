@@ -7,7 +7,7 @@ export default [
     questionSecondText: "",
         answerDirectTo: {
         11: {
-            next: "Thermal"
+            next: "Location"
         },
         10: {
             next: "end"
@@ -21,6 +21,30 @@ export default [
     ]
 },  */
 {
+    name: "Location",
+    displayName: "Location",
+    type: "icon",
+    questionText: "Which room are you in?",
+    questionSecondText: "",
+    answerDirectTo: {
+        9: {
+            next: "thermal"
+        },
+        11: {
+            next: "thermal"
+        },
+        10: {
+            next: "thermal"
+        }
+    },
+    iconText: ["Bedroom", "Kitchen", "Living room"],
+    iconColors: ["fb-cyan", "fb-orange", "fb-green"],
+    iconImages: [
+        "images/icons/activityintensity/resting.png",
+        "images/icons/activitytype/eating.png",
+        "images/icons/activityintensity/middle.png",
+    ],
+}, {
     name: "thermal",
     displayName: "Thermal",
     type: "icon",
@@ -46,19 +70,19 @@ export default [
     ],
 }, {
     name: "RH",
-    displayName: "Relative Humidity",
+    displayName: "RH",
     type: "icon",
     questionText: "Preferred humidity?",
     questionSecondText: "",
     answerDirectTo: {
         9: {
-            next: "IAQ"
+            next: "IAQ1"
         },
         11: {
-            next: "IAQ"
+            next: "IAQ1"
         },
         10: {
-            next: "IAQ"
+            next: "IAQ1"
         }
     },
     iconText: ["Drier", "More humid", "I'm comfy"],
@@ -70,10 +94,35 @@ export default [
     ],
 }, {
     
-    name: "IAQ",
-    displayName: "IAQ",
+    name: "IAQ1",
+    displayName: "IAQ1",
     type: "icon",
-    questionText: "Preferred air quality?",
+    questionText: "Prefer air to be?",
+    questionSecondText: "",
+    answerDirectTo: {
+        9: {
+            next: "IAQ2"
+        },
+        11: {
+            next: "IAQ2"
+        },
+        10: {
+            next: "IAQ2"
+        }
+    },
+    iconText: ["Less odour", "More scent", "I'm comfy"],
+    iconColors: ["fb-orange", "fb-purple", "fb-green"],
+    iconImages: [
+        "images/icons/air/air_more_air.png",
+        "images/icons/air/air_less_air.png",
+        "images/icons/comfy.png",
+    ],
+}, {
+    
+    name: "IAQ2",
+    displayName: "IAQ2",
+    type: "icon",
+    questionText: "Prefer air to be?",
     questionSecondText: "",
     answerDirectTo: {
         11: {
@@ -83,7 +132,7 @@ export default [
             next: "noise"
         }
     },
-    iconText: ["Less odour", "I'm comfy"],
+    iconText: ["Less stuffy", "I'm comfy"],
     iconColors: ["fb-orange", "fb-green"],
     iconImages: [
         "images/icons/air/air_less_air.png",
