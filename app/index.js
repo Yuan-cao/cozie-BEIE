@@ -589,7 +589,7 @@ const buzzOptions = {
     3: [9, 12, 15, 18]
 };
 
-let buzzSelection = 1; // default value
+let buzzSelection = 2; // default value
 let vibrationTimeArray = buzzOptions[buzzSelection];
 
 // Shift the array to the next vibration hour
@@ -605,7 +605,7 @@ while (vibrationTimeArray[0] <= currentHour && testedHoursNumber < vibrationTime
     testedHoursNumber++;
 }
 
-// Reminder test (this function runs every 5 min)
+// Reminder test (this function runs every 0.05 min)
 setInterval(function() {
     const currentDate = new Date(); // get today's date
     const currentHour = currentDate.getHours();
@@ -645,7 +645,7 @@ setInterval(function() {
         }
     }
     console.log("Buzz variables: currentHour = " + currentHour + ", vibrationTimeArray[0] = " + vibrationTimeArray[0] + ", testedHoursNumber = " + testedHoursNumber);
-}, 300000); // timeout for 5 minutes
+}, 3000); // timeout for 0.05 minutes
 
 
 /* -------------------------------------------------------------------------------------

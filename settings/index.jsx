@@ -165,7 +165,7 @@ function mySettings(props) {
                         {
                             name: "Every 2 hours",
                             value: "2",
-                            subLabel: "Between 9:00 - 17:00",
+                            subLabel: "Between 9:00 - 21:00",
                             img: sound
                         },
                         {
